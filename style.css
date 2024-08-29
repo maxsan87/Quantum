@@ -1,7 +1,6 @@
 body{
-    background-color: violet;
+    background-color: rebeccapurple;
 }
-
 .contenedor1{
     display: flexbox;
 }
@@ -10,4 +9,92 @@ body{
    height: 100px;
    background-color: aqua;
    color: aqua;
+}
+.container-fluid{
+    background-color: blueviolet;
+}
+.navbar-brand,.form-control,.btn-outline-success{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*Inicia el carrusel*/
+.carrusel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagenes {
+    display: flex;
+    width: 100%; /* Ajusta según el número de imágenes */
+    transition: transform 0.5s ease-in-out;
+}
+
+.imagenes img {
+    width: 25%; /* Ajusta según el número de imágenes */
+    height: auto;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.izquierda {
+    left: 10px;
+}
+
+.derecha {
+    right: 10px;
+}
+/*Termina el carrusel*/
+.card{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.card-title{
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card-contenedor{
+    background-color:rebeccapurple;
+    display: grid;
+    gap: 1em;
+}
+.title-cards-container{
+    background-color: black;
+    color: white;
+    padding: 1.2em .5em;
+    margin: 0;
+    text-align: center;
+}
+@media(min-width:720px){
+    .card-contenedor{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .title-cards-container{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+.card-img{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
