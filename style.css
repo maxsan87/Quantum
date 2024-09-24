@@ -1,3 +1,56 @@
+/*navbar*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centra verticalmente */
+    background-color:blueviolet; /* Color de fondo */
+    padding: 10px 20px; /* Relleno interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.navbar-brand {
+    font-size: 24px; /* Tamaño de la marca */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.navbar form {
+    display: flex; /* Alineación horizontal del formulario */
+}
+
+.form-control {
+    padding: 8px; /* Relleno interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+    margin-right: 10px; /* Espaciado entre el input y el botón */
+}
+
+.btn {
+    padding: 8px 12px; /* Relleno interno */
+    border: 1px solid black; /* Borde del botón */
+    border-radius: 4px; /* Esquinas redondeadas */
+    background-color: white; /* Color de fondo del botón */
+    color: #28a745; /* Color del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.btn:hover {
+    background-color: #28a745; /* Color de fondo al pasar el ratón */
+    color: white; /* Color del texto al pasar el ratón */
+}
+.inse{
+    margin-left: 10px;
+    text-decoration: none;
+}
+/*navbar*/
+
 .mein{
     background-color: rebeccapurple;
 }
@@ -23,8 +76,10 @@ h3{
 .navbar-brand,.form-control,.btn-outline-success{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-a{
-    text-decoration: none;
+
+a {
+    color: inherit; /* Hereda el color del elemento padre */
+    text-decoration: none; /* Elimina el subrayado */
 }
 /*Inicia el carrusel*/
 .carousel-inner{
@@ -41,7 +96,16 @@ a{
     height: 100px;
     margin-right: 10px;
     margin-left: 10px;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
 }
+.card:hover{
+    box-shadow: 0 4px 4px 0 #d70dc3,0 4px 4px 0 #d70dc3;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
+  }
 .card-title{
     font-size: 25px;
     text-align: center;
@@ -85,21 +149,38 @@ p{
 .Lobby{
     text-decoration: none;
 }
+/*Pop-Up*/
 .añadir{
     position: relative;
     z-index: 1;
-    padding: 10px 20px;  /* Ajusta el tamaño del botón */
-    border: none;        /* Elimina el borde predeterminado */
-    border-radius: 12px; /* Redondea los bordes del botón */
-    background-color: #007BFF; /* Color de fondo del botón */
-    color: white;        /* Color del texto */
-    font-size: 16px;     /* Tamaño de la fuente */
-    cursor: pointer;     /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    padding: 10px 20px;  
+    border: none;       
+    border-radius: 12px; 
+    background-color: #007BFF; 
+    color: white;       
+    font-size: 16px;    
+    cursor: pointer;    
+    transition: background-color 0.3s; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
   }
-  .añadir:hover {
+  .añadir:hover{
+    box-shadow: 0 4px 4px 0 #000000,0 4px 4px 0 #000000;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
+  }
+  .añadir,.msjpopb:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
     background-color: #0056b3; /* Color de fondo al pasar el mouse */
+  }
+  .añadir:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
   .popup {
     display: none; /* Oculto por defecto */
@@ -117,15 +198,22 @@ p{
 }
 
 .popup-contenido {
-    background: purple;
-    padding: 100px;
+
+    background: linear-gradient(to right, rebeccapurple,rgb(144, 86, 252), blue);
+    opacity: 25%;
+    padding: 50px;
     border-radius: 12px;
     text-align: center;
     position: relative;
     width: 300px;
     max-width: 80%;
-}
+    box-shadow: 0 4px 8px blueviolet;
 
+}
+.popup-contenido:before{
+  background-color:blue
+
+}
 .cerrar {
     position: absolute;
     top: 10px;
@@ -137,23 +225,49 @@ button{
     border-radius: 12px
 }
 .msjpopup{
-    background-color:blueviolet;
+    text-align:left;
+    color: white;
     border: none;
     border-radius:12px ;
-    font-size: 20px;
-    text-align: center;
+    font-size: 23px;
+    white-space: wrap;
+    width: 100%;
 
 }
+.msjpopup,.msjpopb,.popup-contenido{animation:msjpopup .6s cubic-bezier(.25,.46,.45,.94) both}
+ @keyframes msjpopup{0%{transform:rotateY(30deg) translateY(-300px) skewY(-30deg);opacity:0}100%{transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}
+ @keyframes msjpopb{0%{transform:rotateY(30deg) translateY(-300px) skewY(-30deg);opacity:0}100%{transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}
+ @keyframes popup-contenido{0%{transform:rotateY(30deg) translateY(-300px) skewY(-30deg);opacity:0}100%{transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}
+
 .msjpopb{
+    justify-content: flex-end;
     position: relative;
     z-index: 1;
     padding: 10px 30px;  /* Ajusta el tamaño del botón */
     border: none;        /* Elimina el borde predeterminado */
     border-radius: 12px; /* Redondea los bordes del botón */
-    background-color: #007BFF; /* Color de fondo del botón */
+    background: linear-gradient(to right, blue,rgb(144, 86, 252), rebeccapurple);
     color: white;        /* Color del texto */
     font-size: 16px;     /* Tamaño de la fuente */
     cursor: pointer;     /* Cambia el cursor al pasar sobre el botón */
     transition: background-color 0.3s; /* Transición suave para el color de fondo */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
   }
+  .msjpopb:hover{
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
+  }
+  .msjpopb:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .ipop{
+    margin-bottom: 10px;
+  }
+  /*Pop-Up*/

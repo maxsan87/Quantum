@@ -12,17 +12,13 @@
 <body>
   <div class="mein">
   <header>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a href="http://localhost/Quantum/InicioSesion/index.php"><i class="fa-solid fa-user">  Iniciar sesion/Registrarse</i></a>
-          <a class="navbar-brand"> <img src="./imagenes/Iconn.png" alt="" height="30px">  Quantum</a>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <button class="btn btn-outline-success" type="submit" name="Busqueda">Buscar</button>
-          </form>
-        </div>
-      </nav>
-      
+      <nav class="navbar">
+        <a class="inse" href="http://localhost/Quantum/InicioSesion/index.php"><i class="fa-solid fa-user">  Iniciar sesion/Registrarse</i></a>
+        <a class="navbar-brand"> <img src="./imagenes/Iconn.png" alt="" height="30px">  Quantum</a>
+        <form class="d-flex" role="search">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn" type="submit">Buscar</button>
+        </form>
 
 </header>
 <div class="box-shadow-margin">
@@ -211,11 +207,14 @@
 <div id="popup" class="popup">
   <div class="popup-contenido">
       <span id="cerrar-popup" class="cerrar">  &times;</span>
+      <img class="ipop" src="./imagenes/Iconn.png" alt="" height="50px">
       <p class="msjpopup">Debes iniciar sesion para seguir con la operacion  </p>
+      <br>
       <a href="http://localhost/Quantum/InicioSesion/index.php"><button class="msjpopb">Iniciar sesion</button></a>
   </div>
 </div>
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
