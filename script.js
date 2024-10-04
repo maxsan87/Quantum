@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var mostrarPopup = document.getElementById('mostrar-popup');
+    var mostrarPopupButtons = document.querySelectorAll('.anadir');
     var popup = document.getElementById('popup');
     var cerrarPopup = document.getElementById('cerrar-popup');
 
-    mostrarPopup.addEventListener('click', function() {
-        popup.style.display = 'flex'; // Mostrar pop-up
+    mostrarPopupButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            popup.style.display = 'flex'; // Mostrar pop-up
+        });
     });
 
     cerrarPopup.addEventListener('click', function() {
@@ -16,4 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
             popup.style.display = 'none'; // Ocultar pop-up
         }
     });
+});
+var SubMenu= document.querySelector('.submenu');
+var openSubMenu= document.querySelector('.openmenu');
+
+openSubMenu.addEventListener('click', function(){
+    SubMenu.classList.toggle('show');
+})
+    document.addEventListener('click',function(e){  
+    if(SubMenu.classList.contains('show')
+        && !SubMenu.contains(e.target)
+        && !openSubMenu.contains(e.target)){
+
+            SubMenu.classList.remove('show');
+        }
+    
 });
