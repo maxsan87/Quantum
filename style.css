@@ -7,15 +7,17 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Espaciado entre elementos */
+    justify-content: center;
     align-items: center; /* Centra verticalmente */
-    background: linear-gradient(to right, rebeccapurple,rgb(124, 55, 193) ,rgb(144, 86, 252),rgb(59, 8, 212) , blue);
+    background: linear-gradient(to right, blue,rgb(144, 86, 252), blue);
     padding: 10px 20px; /* Relleno interno */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 .navbar-brand {
-    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 45%;
     font-size: 24px; /* Tamaño de la marca */
     font-weight: bold; /* Negrita */
     color: #333; /* Color del texto */
@@ -65,7 +67,7 @@ body {
     justify-content: space-between; /* Espaciado entre elementos */
     align-items: center; /* Centra verticalmente */
     background: linear-gradient(to left, rebeccapurple,rgb(124, 55, 193) ,rgb(144, 86, 252),rgb(59, 8, 212) , blue);
-    padding: 5px 10px; /* Relleno interno */
+    padding: 5px 1  0px; /* Relleno interno */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
     width: 100%;
 }
@@ -90,9 +92,9 @@ body {
 }
 .header{
     position: relative;
-    background-color: white;
+    background: linear-gradient(to left, rebeccapurple,rgb(124, 55, 193) ,rgb(144, 86, 252),rgb(59, 8, 212) , blue);
     width: 100%;
-    min-height: 80px;
+    min-height: 70px;
     box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: start;
@@ -109,6 +111,7 @@ body {
 }
 .submenu{
     position: absolute;
+    justify-content: space-between; /* Espaciado entre elementos */
     top: 100%;
     background-color: rgb(194, 13, 119);
     box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
@@ -118,7 +121,7 @@ body {
     overflow: hidden;
 }
 .submenu.show{
-    max-height: 300px;
+    max-height: 500px;
 }
 .submenu ul{
     display: flex;
@@ -140,6 +143,13 @@ body {
 }
 .icon-color {
     color: rgb(250, 92, 250); /* Cambia el color del ícono a rojo */
+    margin-right: 10px;
+}
+.bienvenida{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: linear-gradient(to right, white,black, grey);
+    margin-right: 100px;
+    margin-top: 10px;
 }
 /*navbar2*/
 .mein{
@@ -181,19 +191,60 @@ a {
     margin-bottom: 25px;
   }
 /*Termina el carrusel*/
-.card{
+.barra{
     display: flex;
+    align-items: center; /* Centra verticalmente el texto y la línea */
+}
+
+.barra h2 {
+    margin-left: 10px;
+
+    font-weight: bold; /* Estilo de texto negrita */
+}
+.barra a{
+    text-decoration: none;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-weight: bold; /* Estilo de texto negrita */
+}
+.separator{
+    flex: 1; /* Ocupa el espacio restante */
+    border: none; /* Elimina el borde predeterminado */
+    height: 4px; /* Aumenta el alto de la línea para que sea más gruesa */
+    background-color: #3498db; /* Cambia el color a un azul brillante (puedes usar cualquier color que desees) */
+    margin-left: 10px; /* Espaciado a la izquierda de la línea */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Agrega sombra para darle profundidad */
+}
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    flex-direction: row;
+}
+.card{
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px; /* Ajusta el ancho de las tarjetas */
     background-color: black;
     color: white;
     padding: 1em;
     border: 1px solid grey;
     border-radius: 10px;
-    height: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
+    height: auto;
     transition: .5s, color .10s;
-    -webkit-transition: .5s, color .10s;
-    -moz-transition: .5s, color .10s;
+    margin-right: 15px;
+}
+.card-content {
+    margin-bottom: 10px;
+    flex: 1; /* Ocupa todo el espacio disponible */
+    margin-right: 20px; /* Espacio entre el texto y la imagen */
+}
+.card-image img {
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
 }
 .card:hover{
     box-shadow: 0 4px 4px 0 #d70dc3,0 4px 4px 0 #d70dc3;
@@ -243,6 +294,7 @@ p{
     z-index: 2;
 }
 .Lobby{
+    
     text-decoration: none;
     background: linear-gradient(to right, rebeccapurple,rgb(124, 55, 193) ,rgb(144, 86, 252),rgb(59, 8, 212) , blue);
 }
@@ -252,6 +304,7 @@ p{
 /*Pop-Up*/
 .anadir{
     position: relative;
+    justify-content: center;
     z-index: 1;
     padding: 10px 20px;  
     border: none;       
