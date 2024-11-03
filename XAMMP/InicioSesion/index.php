@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +23,7 @@
         <input type="password" name="contraseña" placeholder="Clave">
         <hr>
         <button type="submit">Iniciar Sesion</button>
-        <button type="submit"><a href="">Crear cuenta</a></button>
+        <button type="submit"><a href="./CrearCuenta/index.php">Crear cuenta</a></button>
 </form>
 </body>
 </html>

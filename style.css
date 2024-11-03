@@ -1,4 +1,6 @@
-/*navbar*/
+html{
+    background: linear-gradient(to right, rgb(118, 65, 171),rgb(124, 55, 193) ,rgb(144, 86, 252),rgb(59, 8, 212) , blue);
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -63,8 +65,7 @@ body {
 /*navbar*/
 /*navbar2*/
 .navbar2{
-    display: flex;
-    justify-content: space-between; /* Espaciado entre elementos */
+    justify-content: center; /* Espaciado entre elementos */
     align-items: center; /* Centra verticalmente */
     background: linear-gradient(to left, rebeccapurple,rgb(124, 55, 193) ,rgb(144, 86, 252),rgb(59, 8, 212) , blue);
     padding: 5px 1  0px; /* Relleno interno */

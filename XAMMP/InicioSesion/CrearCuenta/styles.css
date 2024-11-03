@@ -1,0 +1,65 @@
+body{
+    background:linear-gradient(to right, blue,rgb(144, 86, 252), rebeccapurple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    width: 600px;
+    border: 2px solid black;
+    padding: 6rem;
+    background:linear-gradient(to right, blue,rgb(144, 86, 252), rebeccapurple);
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+.icon{
+    height: 50px;
+    margin-right: 5px;
+}
+h1{
+    display: block;
+    background-color: darkmagenta;
+    border: 2px solid purple;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+h1,.icon{
+    display: flex;
+    justify-content: center;
+}
+label{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 300;
+}
+input{
+    display: block;
+    border: 2px solid black;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+button{
+    float: right;
+    background-color:darkmagenta;
+    padding: 1rem;
+    color: white;
+    border: none;
+    width: 40%;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+button:hover{
+    background-color: wheat;
+    color: black;
+}

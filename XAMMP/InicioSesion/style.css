@@ -1,5 +1,5 @@
 body{
-    background-color: rebeccapurple;
+    background:linear-gradient(to right, blue,rgb(144, 86, 252), rebeccapurple);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ form{
     width: 600px;
     border: 2px solid black;
     padding: 6rem;
-    background-color: blueviolet;
+    background:linear-gradient(to right, blue,rgb(144, 86, 252), rebeccapurple);
     border: none;
     border-radius: 20px;
     color: white;
